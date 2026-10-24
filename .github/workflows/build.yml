@@ -1,5 +1,16 @@
 name: Build
 on:
+  workflow_dispatch:
+    inputs:
+      upload-artifact:
+        type: boolean
+        default: true
+      tag-name:
+        type: string
+        default: "draft"
+      channel:
+        type: string
+        default: "dev"
   workflow_call:
     inputs:
       upload-artifact:
